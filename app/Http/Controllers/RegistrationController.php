@@ -57,7 +57,7 @@ class RegistrationController extends Controller
                 'message' => "Registered Successfully",
                 'user' => $user,
                 'voucher' => $voucher
-            ], 200);
+            ], 201);
         } catch (\Exception $e) {
             DB::rollback();
             return response()->json([
